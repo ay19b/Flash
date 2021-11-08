@@ -1,9 +1,9 @@
 import React from 'react'
-import './itemSlide.css'
+import './card.css'
 
 
 
-function ItemSlide({id,question,answer}) {
+function Card({id,question,answer}) {
 
 return(
                <div className='inner-card' key={id}>
@@ -18,4 +18,4 @@ return(
 
 }
 
-export default ItemSlide
+export default Card;

@@ -1,6 +1,6 @@
 {
-  "name": "flashcard",
   "homepage": "http://ay19b.github.io/flashcard",
+  "name": "flashcard",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

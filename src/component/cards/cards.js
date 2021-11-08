@@ -1,6 +1,6 @@
 import React from 'react'
 import './cards.css'
-import { useDispatch,useSelector } from 'react-redux'
+import {useSelector } from 'react-redux'
 import {selectFlash} from '../../features/counter/flashSlice'
 import Empty from '../empty'
 import Card from './card'
