@@ -8,7 +8,7 @@ import {Link} from 'react-router-dom';
 function Navbar() {
     return (
         <nav >
-            
+             <h1>FlashCard</h1>
              <ul className="list-nav">
 			  <li><Link className="nav-link" to={"/cards"}> <h4>Cards</h4> <MdFindInPage /></Link></li>
               <li><Link className="nav-link" to={'/edit'}><h4>New</h4> <CgAdd /></Link></li>

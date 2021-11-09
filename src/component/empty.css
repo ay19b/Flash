@@ -22,15 +22,21 @@
     cursor: pointer;
 }
 @media screen and (max-width: 768px){
-.content {
+.empty .content {
     width: 90%;
 	margin-top: 20%;
 }
+.empty .content h1{
+	font-size: 1.6rem;
+}
 }
 @media screen and (max-width:320px){
-.content {
+.empty .content{
     width: 90%;
 	margin-top: 30%;
 	font-size: small;
+}
+.empty .content h1{
+	font-size: 1.4rem;
 }
 }

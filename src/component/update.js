@@ -18,7 +18,7 @@ function Update() {
 
 
        const update= () => {
-        if (question === "" || answer === "") {
+        if (question == "" || answer == "") {
           alert("Input is Empty");
         } else {
          dispatch(

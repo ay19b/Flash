@@ -11,24 +11,15 @@ function App() {
 	<div className="App">
        <BrowserRouter>
      <>
-     <h1>Flash Card</h1>
+     
      <Navbar />
 	 
-       <Switch>
-        
-        <Route  path={'/cards'} component={Cards}>
-		       <Cards />
-        </Route>
-	    <Route  path={'/edit'} component={Edit}>
-		       <Edit />
-        </Route>
-	      <Route  path={'/practice'} component={Practice}>
-		       <Practice />
-        </Route>
-        <Route  path={'/update/:id'} component={Update}>
-		       <Update />
-        </Route>
-       
+      <Switch>
+        <Route  exact path={'/'} component={Cards}></Route>
+        <Route  path={'/cards'} component={Cards}></Route>
+	      <Route  path={'/edit'} component={Edit}></Route>
+	      <Route  path={'/practice'} component={Practice}></Route>
+        <Route  path={'/update/:id'} component={Update}></Route>
       </Switch>
     
     </>
