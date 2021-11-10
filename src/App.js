@@ -9,20 +9,17 @@ import {BrowserRouter, Switch, Route} from 'react-router-dom'
 function App() {
   return (
 	<div className="App">
-       <BrowserRouter>
-     <>
-     
-     <Navbar />
-	 
+    <BrowserRouter>
+       <>
+      <Navbar />
       <Switch>
-        <Route  exact path={'/'} component={Cards}></Route>
+        <Route  exact path={'/'} component={Cards}><Cards /></Route>
         <Route  path={'/cards'} component={Cards}></Route>
 	      <Route  path={'/edit'} component={Edit}></Route>
 	      <Route  path={'/practice'} component={Practice}></Route>
         <Route  path={'/update/:id'} component={Update}></Route>
       </Switch>
-    
-    </>
+       </>
      </BrowserRouter>
     </div>
   );
