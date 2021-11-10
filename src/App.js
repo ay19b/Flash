@@ -11,18 +11,18 @@ import {BrowserRouter, Switch, Route} from 'react-router-dom'
 function App() {
   return (
 	<div className="App">
-    
-    <BrowserRouter>
+
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
        <>
          
       <Switch>
-        <Route  exact path={'/'} component={Cards}>
+	     <Route  exact path={'/'} >
 		   <Navbar />
-		   <Cards />
+	       <Cards />
 		</Route>
         <Route  path={'/cards'} component={Cards}>
 		   <Navbar />
-		   <Cards />
+	       <Cards />
 		</Route>
 	      <Route  path={'/edit'} component={Edit}>
 		  <Navbar />
