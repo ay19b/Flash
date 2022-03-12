@@ -8,7 +8,7 @@ const Empty = () => (
     <Container>
     <div className='content'>
       <h1>
-        You have no flash cards
+        You don't have flash cards
       </h1>
       <Link to={'/edit'} >
         <Button>Make One</Button>            
