@@ -1,12 +1,11 @@
 .cards{
     margin: 0 auto;
     width: 80%;
-    height: 100vh;
-    max-width: 800px;
     text-align: center;
     position: relative;
     display: flex;
     overflow: hidden;
+    margin-top: 3%;
 }
 .awssld__container figure, .awssld__content, .awssld__box {
     background-color: transparent !important;

@@ -1,13 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import {CgAdd} from "react-icons/cg"
-import {ImAddressBook} from "react-icons/im"
-import {MdFindInPage} from "react-icons/md"
 import {RiCloseLine} from 'react-icons/ri'
 import {FaReply} from "react-icons/fa"
 import {FiMenu} from "react-icons/fi"
 import {Link} from 'react-router-dom';
 import './navbar.css'
-import {AppBar,Typography,Grid,makeStyles,Container} from '@material-ui/core';
+import {Typography,Grid,Container} from '@material-ui/core';
 
 
 
@@ -21,10 +18,6 @@ function Navbar() {
         setShowLinks(!showLinks);
       };
    
-    const handleClick = (e) => {
-    e.preventDefault()
-    setShowLinks(!showLinks);
-  }
    const changeBackground=()=>{
       if(window.scrollY>=60){
         setNavbar(true)
@@ -41,8 +34,8 @@ function Navbar() {
     return (
 	 <nav className='nav'>
 		 <Container>
-	       <Grid container spacing={2}>
-		     <Grid item md={4} sm={5} xs={6} className='GridLogo'>
+	       <Grid container spacing={2} className='gridContainer'>
+		     <Grid item md={4} sm={5} xs={8} className='GridLogo'>
            <Typography variant='h5' className="logo"><FaReply className='svgLogo'/> FlashCard</Typography>
          </Grid>
 			   <Grid item md={8} sm={7}>
@@ -69,10 +62,9 @@ function Navbar() {
               </li>
             </ul>
 			 </Grid>
-       <Grid item xs={5} className='menu'>
+       <Grid item xs={3} className='menu'>
 			   <Typography variant='h4' className='menuIcon'>
-           <FiMenu onClick={toggleLinks}/>
-           
+           <FiMenu onClick={toggleLinks}/> 
          </Typography>
 	   	</Grid>
 		</Grid>

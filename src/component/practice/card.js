@@ -4,8 +4,7 @@ import './card.css'
 
 
 function Card({id,question,answer}) {
-
-return(
+      return(
                <div className='inner-card' key={id}>
                         <div className="front-card" >
                           <h2>{question}</h2>

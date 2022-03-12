@@ -1,12 +1,13 @@
-import React from 'react'
-import './practice.css'
-import Card from './card'
-import {useSelector } from 'react-redux'
+import React from 'react';
+import './practice.css';
+import Card from './card';
+import {useSelector } from 'react-redux';
 import {selectFlash} from '../../features/counter/flashSlice'
 import AwesomeSlider from 'react-awesome-slider';
 import withAutoplay from 'react-awesome-slider/dist/autoplay';
 import 'react-awesome-slider/dist/styles.css';
-import Empty from '../empty'
+import Empty from '../empty/empty'
+import {Container} from '@material-ui/core';
 
 
 function Practice() {
@@ -17,6 +18,7 @@ function Practice() {
 	
 	  <>
 	    {flash.length>=1?<div className="cards">
+        <Container>
           <AutoplaySlider
               play={false}
               cancelOnInteraction={false}
@@ -36,9 +38,10 @@ function Practice() {
                  )
                })}
 
-	</AutoplaySlider>
-	</div>: <Empty /> }
-	</>	
+	         </AutoplaySlider>
+        </Container>
+	      </div>: <Empty /> }
+	  </>	
     )
 }
 

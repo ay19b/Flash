@@ -1,5 +1,5 @@
 import React from 'react'
-import './cards.css'
+import './card.css'
 import {GiTrashCan} from 'react-icons/gi'
 import {HiPencilAlt} from 'react-icons/hi'
 import { useDispatch} from 'react-redux'
@@ -23,7 +23,7 @@ function Card({id,question,answer}) {
                           <Link to={`/update/${id}`} key={id}>
                              <HiPencilAlt  />
                           </Link>
-                          <GiTrashCan onClick={() =>dispatch(deleteFlash(id))}/>
+                          <GiTrashCan color="black" onClick={() =>dispatch(deleteFlash(id))}/>
                           </div>
                   </div>
     

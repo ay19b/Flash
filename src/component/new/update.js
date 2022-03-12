@@ -1,11 +1,11 @@
 import React,{useState} from 'react'
-import './new/edit.css'
-import {updateFlash} from '../features/counter/flashSlice'
-import {selectFlash} from '../features/counter/flashSlice'
+import './edit.css'
+import {updateFlash} from '../../features/counter/flashSlice'
+import {selectFlash} from '../../features/counter/flashSlice'
 import { useParams } from 'react-router-dom';
 import {Link} from 'react-router-dom';
 import { useDispatch,useSelector } from 'react-redux'
-import {Typography,Grid,Button,makeStyles,Container,TextField} from '@material-ui/core';
+import {Button,TextField} from '@material-ui/core';
 
 
 function Update() {
@@ -41,7 +41,7 @@ function Update() {
             <TextField
                      id="outlined-size-small"
                      className='textField'
-                     label="front Card..."
+                     placeholder="Enter front..."
                      value={question}
                      variant="outlined"
                      size="small"
@@ -51,7 +51,7 @@ function Update() {
                   <TextField
                      id="outlined-size-small"
                      className='textField'
-                     label="Back Card..."
+                     placeholder="Enter Back..."
                      value={answer}
                      variant="outlined"
                      size="small"

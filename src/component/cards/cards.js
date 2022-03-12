@@ -1,8 +1,9 @@
 import React from 'react'
-import './cards.css'
+import './card.css'
 import {useSelector } from 'react-redux'
 import {selectFlash} from '../../features/counter/flashSlice'
-import Empty from '../empty'
+import {Container} from '@material-ui/core';
+import Empty from '../empty/empty'
 import Card from './card'
 
 
@@ -14,6 +15,7 @@ function Cards() {
     
      {flash.length>=1?
 	    <div className="list-cards">
+        <Container>
         {flash.map((item)=>{ 
               return(
                   
@@ -23,6 +25,7 @@ function Cards() {
                     )
               })
             }
+        </Container>
 			</div>:<Empty />}
 		</>  
     )

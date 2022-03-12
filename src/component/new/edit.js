@@ -3,7 +3,7 @@ import './edit.css'
 import {addFlash} from '../../features/counter/flashSlice'
 import {Link} from 'react-router-dom';
 import { useDispatch} from 'react-redux'
-import {Typography,Grid,Button,makeStyles,Container,TextField} from '@material-ui/core';
+import {Button,TextField} from '@material-ui/core';
 
 function Edit() {
     const [question, setQuestion] = useState("")
@@ -44,7 +44,7 @@ function Edit() {
                   <TextField
                      id="outlined-size-small"
                      className='textField'
-                     label="front Card..."
+                     placeholder="Enter front..."
                      value={question}
                      variant="outlined"
                      size="small"
@@ -55,7 +55,7 @@ function Edit() {
                   <TextField
                      id="outlined-size-small"
                      className='textField'
-                     label="Back Card..."
+                     placeholder="Enter Back..."
                      value={answer}
                      variant="outlined"
                      size="small"

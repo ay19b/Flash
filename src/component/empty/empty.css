@@ -21,6 +21,9 @@
     background-color: #0a6b2f;
 }
 @media (min-width: 1200px) {
+  .empty .content {
+    height: calc(1vw + 13rem);
+  }
     .content h1{
       font-size: calc(1vw + 1.2rem);
     }

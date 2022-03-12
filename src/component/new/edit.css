@@ -16,13 +16,13 @@
 }
 .edit .textField{
     width: 70%;
-    margin: 5% 0%;
-    
+    margin: 5% 0%; 
 }
 .MuiOutlinedInput-root {
-    border-radius: 15px !important;
+    border-radius: 10px !important;
     background-color: #eee;
 }
+
 .edit .tools{
     display: flex;
     justify-content: space-between;
@@ -66,7 +66,21 @@ input:hover label{
     left: 18%;
 }
 
-
+@media (min-width: 1200px) {
+    .MuiOutlinedInput-inputMarginDense {
+        padding-top: 13.5px !important;
+        padding-bottom: 13.5px !important;
+    }
+    .MuiInputBase-root{
+        font-size: calc(1vw + 0.4rem) !important;
+    }
+    .create h2{
+        font-size: calc(1vw + 1.3rem) !important;
+    }
+    .edit button{
+        font-size: calc(1vw + 0.2rem) !important;
+    }
+}
 @media screen and (max-width: 900px) {
 .create {
     width: 75%;

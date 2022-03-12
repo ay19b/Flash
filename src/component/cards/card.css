@@ -36,7 +36,7 @@
 	color: #9f4343;
 }
 .tools svg:hover{
-	color: #26ac8d;
+	color: #26ac8d !important;
 	cursor:pointer;
 }
 
@@ -57,5 +57,6 @@
 @media (max-width: 600px) {
     .bat{
         width: 80%;
+        box-shadow:none;
     }
 }

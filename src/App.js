@@ -2,9 +2,9 @@ import React from 'react';
 import Practice from './component/practice/practice'
 import './App.css';
 import Edit from './component/new/edit';
-import Navbar from './component/navbar';
+import Navbar from './component/header/navbar';
 import Cards from './component/cards/cards';
-import Update from './component/update';
+import Update from './component/new/update';
 import {BrowserRouter, Switch, Route} from 'react-router-dom'
 
 
