@@ -5,10 +5,6 @@ export const flashSlice = createSlice({
   name: 'flash',
   initialState: {
     flashs: [],
-    flash: {
-      question: "",
-      answer: ""
-    },
   },
   reducers: {
     addFlash: (state, action) => {

@@ -1,18 +1,27 @@
 .edit{
-    height: 100vh;
+    
 }
 .create{
 	display: flex;
     flex-direction: column;
     width: 60%;
-	background-color: #e8c3ac;
 	border-radius: 15px;
 	box-shadow: 1px 1px 1px 2px #655a71;
 	color: black;
 	margin: 6% auto 0% auto;
 }
-.edit h2{
+.create h2{
     padding-top: 4%;
+    font-size: 1.7rem;
+}
+.edit .textField{
+    width: 70%;
+    margin: 5% 0%;
+    
+}
+.MuiOutlinedInput-root {
+    border-radius: 15px !important;
+    background-color: #eee;
 }
 .edit .tools{
     display: flex;
@@ -38,16 +47,13 @@
 	outline: none;
 }
 .edit button{
-    margin-top: 7%;
     color: white;
     border-radius: 20px;
-    width: 40%;
-    padding: 2%;
+    width: 50%;
     background-color: blue;
-    border: none;
     cursor: pointer;
-    font-weight: bold;
-	margin-bottom: 5%;
+    margin-bottom: 3%;
+    padding: 1.5%;
 }
 .edit button:hover{
     background-color: #4949c1;
@@ -70,8 +76,7 @@ input:hover label{
     height: 2.5rem;
 }
 .edit button {
-    width: 30%;
-    padding: 2%; 
+    width: 40%;
 }
 }
 @media screen and (max-width: 600px) {
@@ -83,7 +88,6 @@ input:hover label{
     height: 2rem;
 }
 .edit button {
-    width: 45%;
-    padding: 4%; 
+    width: 50%;
 }
 }

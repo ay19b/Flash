@@ -1,19 +1,15 @@
 .empty{
-    height: 100vh;
 }
 .empty .content{
 	width: 60%;
-    margin: 10% auto;
-    background-color: #ecb899;
+    margin: 6% auto;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     flex-direction: column;
     height: 13rem;
 	box-shadow: 1px 1px 1px 1px #161a16;
 }
 .content button{
-    padding: 2%;
-    width: 7rem;
     background-color: #084821;
     outline: none;
     border: none;
@@ -21,15 +17,34 @@
     color: white;
     cursor: pointer;
 }
+.content button:hover{
+    background-color: #0a6b2f;
+}
+@media (min-width: 1200px) {
+    .content h1{
+      font-size: calc(1vw + 1.2rem);
+    }
+    .content button{
+      font-size: calc(1vw + 0.4rem) !important;
+    }
+    .weather-details{
+      font-size: calc(1vw + 0.4rem); 
+    }
+    .status{
+     font-size: calc(1vw + 0.4rem);
+    }
+} 
 @media screen and (max-width: 768px){
 .empty .content {
-    width: 90%;
+    width: 85%;
 	margin-top: 20%;
 }
 .empty .content h1{
 	font-size: 1.6rem;
 }
 }
+
+    
 @media screen and (max-width:320px){
 .empty .content{
     width: 90%;

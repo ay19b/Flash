@@ -33,24 +33,21 @@ card{
   }
   
 .front-card {
-    background-color: #524359;
     color: black;
-    padding-top: 20%;
-	overflow:hidden;
+	  overflow:hidden;
   }
   .front-card h2{
-    padding-top: 35%;
-	color:white;
+    padding-top: 45%;
+	  color:rgb(0, 0, 0);
   }
   .back-card {
-    background-color: #829558;
+    background-color: #686868;
     color: white;
-    padding-top: 20%;
     transform: rotateY(180deg);
-	overflow:hidden;
+	  overflow:hidden;
   }
   .back-card h2{
-    padding-top: 35%;
+    padding-top: 45%;
   }
 .awssld__box {
     background-color: transparent !important;

@@ -1,10 +1,11 @@
-import React, {useState} from 'react'
+import React,{useState} from 'react'
 import './new/edit.css'
 import {updateFlash} from '../features/counter/flashSlice'
 import {selectFlash} from '../features/counter/flashSlice'
 import { useParams } from 'react-router-dom';
 import {Link} from 'react-router-dom';
 import { useDispatch,useSelector } from 'react-redux'
+import {Typography,Grid,Button,makeStyles,Container,TextField} from '@material-ui/core';
 
 
 function Update() {
@@ -14,11 +15,9 @@ function Update() {
     let [question, setQuestion] = useState(item.question);
     let [answer, setAnswer] = useState(item.answer);
    	const dispatch = useDispatch()
-    
-
 
        const update= () => {
-        if (question == "" || answer == "") {
+        if (question === "" || answer === "") {
           alert("Input is Empty");
         } else {
          dispatch(
@@ -38,25 +37,31 @@ function Update() {
         <div className="edit" key={item.id}>
 		    <div className="create">
 			<h2>update a Flash Card</h2>
-            <div className="input">
-                 <label>Question</label>
-                 <input placeholder="Enter Term" 
-                        value={question}
-					    onChange={e => setQuestion(e.target.value)}
-					    type="text"
-                 />
-            </div>
-            <div className="input">
-                <label>Answer</label>
-                <input placeholder="Enter Definition"
-                       value={answer}
-                       onChange={e => setAnswer(e.target.value)}
-                       type="text"
-                />
-            </div>
+            <form>
+            <TextField
+                     id="outlined-size-small"
+                     className='textField'
+                     label="front Card..."
+                     value={question}
+                     variant="outlined"
+                     size="small"
+                     onChange={e => setQuestion(e.target.value)} 
+                     />   
+
+                  <TextField
+                     id="outlined-size-small"
+                     className='textField'
+                     label="Back Card..."
+                     value={answer}
+                     variant="outlined"
+                     size="small"
+                     onChange={e => setAnswer(e.target.value)}
+                     />   
+            
             <Link to={'/cards/'} >
-                <button onClick={() => update()}>UPDATE</button>                
+                <Button onClick={() => update()}>UPDATE</Button>                
             </Link> 
+            </form>
 			</div>
         </div>
 

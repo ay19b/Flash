@@ -8,6 +8,7 @@ import withAutoplay from 'react-awesome-slider/dist/autoplay';
 import 'react-awesome-slider/dist/styles.css';
 import Empty from '../empty'
 
+
 function Practice() {
     const flash = useSelector(selectFlash);
 	  const AutoplaySlider = withAutoplay(AwesomeSlider);
@@ -26,10 +27,11 @@ function Practice() {
                 const{id,question,answer} = item;
                 return(
                  
-                <div className="card">
+                <div className="card" key={id}>
 				           <Card question={question}
                         id={id}
-                        answer={answer}/>
+                        answer={answer}
+                        key={id}/>
 			       	  </div>
                  )
                })}

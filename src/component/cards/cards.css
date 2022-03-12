@@ -1,28 +1,30 @@
 .list-cards{
     display: flex;
     flex-direction: column;
-    padding:4% 0%;
-	height: 100vh;
 }
 .bat{
-    width: 60%;
+    width: 65%;
     margin: 4% auto;
     height: 9rem;
-    background-color: #6e5388;
+    border: 1px solid black;
+    box-shadow: 1px 1px 1px 1px black;
     position: relative;
     border-radius: 10px;
     padding-top: 1%;
-	color:white;
+	color:black;
 }
 
 .bat .inf{
 	text-align: left;
     margin-left: 3%;
 }
-
+.bat .inf h3{
+	font-size: 1.3rem;
+}
 .bat .inf p{
 	margin-left: 6%;
-    margin-top: 6%;
+    margin-top: 2rem;
+    font-size: 1.1rem;
 }
 .bat .tools{
     position:absolute;
@@ -36,4 +38,24 @@
 .tools svg:hover{
 	color: #26ac8d;
 	cursor:pointer;
+}
+
+@media (min-width: 1200px) {
+    .bat{
+        height: calc(1.5vw + 10rem)
+    }
+    .bat .inf h3{
+        font-size: calc(1vw + 0.7rem);
+    }
+    .bat .inf p{
+        font-size: calc(1vw + 0.6rem);
+    }
+    .tools svg{
+        font-size: calc(1vw + 1.4rem);
+    }
+} 
+@media (max-width: 600px) {
+    .bat{
+        width: 80%;
+    }
 }

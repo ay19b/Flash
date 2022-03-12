@@ -1,55 +1,103 @@
-nav{
-	display: flex;
-    flex: 1;
-	border: 2px solid white;
-    border-radius: 10px;
-	width: 90%;
-    margin: auto;
-    justify-content: center;
+.nav{
+    padding: 2% 0%;
+}
+
+.logo{
+    display: flex;
+    justify-content: flex-start;
     align-items: center;
-	padding:1%;
+    color:black !important;
 }
-nav h1{
-	flex: 0.3;
+
+.logo-white{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: white !important;
 }
-.list-nav{
+.svgLogo{
+    color:rgb(150, 244, 180);
+    margin-right: 2%;
+}
+.listNav{
+    display: flex;
+    justify-content: flex-end;
     list-style: none;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    flex: 0.6;
-    margin: auto;
 }
-.list-nav li{
-    margin-right: 10%;
+.listNav li{
+    margin-right: 6%;
 }
-.list-nav li .nav-link{
-    color: black;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    font-weight: bolder;
+.itemNav{
+    color:#504f5b;
 }
-.list-nav li .nav-link h4{
-	color: azure;
+.head-nav{
+  display: none;
 }
-.list-nav li:nth-child(1) .nav-link svg{
-    color:blue;
-	font-size: 1.3rem;
-}
-.list-nav li:nth-child(2) .nav-link svg{
-    color:green;
-	font-size: 1.3rem;
-}
-.list-nav li:nth-child(3) .nav-link svg{
-    color:red;
-	font-size: 1.3rem;
-}
-
-
-@media screen and (max-width: 450px) {
-.list-nav li .nav-link svg{
+.menu{
     display:none;
 }
+.menuIcon{
+    cursor:pointer;
+}
 
+@media (min-width: 1200px) {
+    .listNav a h6{
+      font-size: calc(1vw + 0.7rem);
+    }
+    .logo{
+      font-size: calc(1vw + 0.9rem) !important;
+    }
+    .weather-details{
+      font-size: calc(1vw + 0.4rem); 
+    }
+    .status{
+     font-size: calc(1vw + 0.4rem);
+    }
+} 
+@media (max-width: 600px) {
+    .menu{
+        display: flex;
+        justify-content: flex-end;
+    }
+    .listNav{
+        display: flex;
+        flex-direction: column;
+        width: 97%;
+        position: absolute;
+        top: 0%;
+        z-index: 20;
+        align-items: flex-start;
+        height: 100vh;
+        background: linear-gradient(180deg,#39a95d 0,#39a95d 33%,#005611);
+        transform: translateX(-160%);
+        transition: transform 0.5s ease-in;
+        list-style: none;
+        justify-content: flex-start;
+        left: -3%;
+        padding-top: 9px;
+    }
+    
+    .active{
+        transform: translateX(0%);
+        position: fixed;
+    }
+    .head-nav{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 12%;
+      width: 90%;
+    }
+    .iconClose{
+      display:flex;
+      cursor:pointer;
+    }
+    .itemNav {
+        font-size: 2.5rem !important;
+        color: white;
+      }
+    .listNav a{
+        margin-bottom: 4.5rem;
+        margin-left: -6%;
+    }
 }

@@ -9,7 +9,6 @@ import Card from './card'
 
 function Cards() {
     const flash = useSelector(selectFlash);
-
     return (
      <>
     
