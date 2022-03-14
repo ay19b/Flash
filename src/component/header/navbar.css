@@ -29,6 +29,10 @@
 }
 .itemNav{
     color:#504f5b;
+    font-weight: bold !important;
+}
+.itemNav:hover{
+    color:rgb(150, 244, 180);
 }
 .head-nav{
   display: none;
@@ -95,7 +99,11 @@
     .itemNav {
         font-size: 2.5rem !important;
         color: white;
+        font-weight: normal !important;
       }
+    .itemNav:hover{
+        color:rgb(218, 247, 229);
+    } 
     .listNav a{
         margin-bottom: 4.5rem;
         margin-left: -6%;
