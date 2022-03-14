@@ -22,10 +22,10 @@ function Edit() {
     const handleSubmit = (e) => {
       e.preventDefault();
       if(front === ""){
-        setErrorFront('input is required!')   
+        setErrorFront('Please fill out this field')   
       }
       if(back === ""){
-        setErrorBack("input is required!")
+        setErrorBack("Please fill out this field")
       }
       if(front && back){
         add();

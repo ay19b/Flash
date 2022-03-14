@@ -6,8 +6,7 @@
     width: 65%;
     margin: 4% auto;
     height: 9rem;
-    border: 1px solid black;
-    box-shadow: 1px 1px 1px 1px black;
+    box-shadow: -5px 0px 25px -10px rgba(0,0,0,0.62);
     position: relative;
     border-radius: 10px;
     padding-top: 1%;
@@ -57,6 +56,6 @@
 @media (max-width: 700px) {
     .bat{
         width: 90%;
-        box-shadow:none;
+        margin: 8% auto;
     }
 }
