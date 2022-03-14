@@ -54,7 +54,7 @@
      font-size: calc(1vw + 0.4rem);
     }
 } 
-@media (max-width: 600px) {
+@media (max-width: 599px) {
     .menu{
         display: flex;
         justify-content: flex-end;

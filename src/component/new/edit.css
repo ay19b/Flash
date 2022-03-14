@@ -55,6 +55,7 @@
     margin-bottom: 3%;
     padding: 12px;
     font-size: 0.9rem;
+    outline: none;
 }
 .edit button:hover{
     background-color: #2727d8;

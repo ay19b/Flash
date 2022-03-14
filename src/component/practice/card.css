@@ -43,7 +43,7 @@ card{
     padding-top: 30%;
   }
   .back-card {
-    background-color: #686868;
+    background-color: #3a5e32;
     color: white;
     transform: rotateY(180deg);
 	  overflow:hidden;
