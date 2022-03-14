@@ -2,7 +2,7 @@ import React,{useState} from 'react'
 import './edit.css'
 import {updateFlash} from '../../features/counter/flashSlice'
 import {selectFlash} from '../../features/counter/flashSlice'
-import { useParams } from 'react-router-dom';
+import { useParams,useHistory} from 'react-router-dom';
 import {Link} from 'react-router-dom';
 import { useDispatch,useSelector } from 'react-redux'
 import {Button,TextField} from '@material-ui/core';
@@ -10,26 +10,42 @@ import {Button,TextField} from '@material-ui/core';
 
 function Update() {
     const { id } = useParams();
+    let history = useHistory();
     const flash = useSelector(selectFlash);
     const item = flash.find(e=>e.id == id)
-    let [question, setQuestion] = useState(item.question);
-    let [answer, setAnswer] = useState(item.answer);
+    let [front, setFront] = useState(item.front);
+    let [back, setBack] = useState(item.back);
+    const [errorFront, setErrorFront] = React.useState("");
+    const [errorBack, setErrorBack] = React.useState("");
+    const [isSubmit, setIsSubmit] = useState(false);
    	const dispatch = useDispatch()
 
+
+
+       const handleSubmit = (e) => {
+        e.preventDefault();
+        if(front === ""){
+          setErrorFront('input is required!')   
+        }
+        if(back === ""){
+          setErrorBack("input is required!")
+        }
+        if(front && back){
+            update();
+            history.push("/cards");
+        }
+        setIsSubmit(true);
+      }; 
        const update= () => {
-        if (question === "" || answer === "") {
-          alert("Input is Empty");
-        } else {
-         dispatch(
+        dispatch(
             updateFlash({
                 id:id,
-                question:question,
-                answer:answer
+                front:front,
+                back:back
               }),
-              setQuestion(""),
-              setAnswer("")
+              setFront(""),
+              setBack("")
          ) 
-        }
       };
     
     return (
@@ -37,30 +53,32 @@ function Update() {
         <div className="edit" key={item.id}>
 		    <div className="create">
 			<h2>update a Flash Card</h2>
-            <form>
+            <form onSubmit={handleSubmit}>
             <TextField
                      id="outlined-size-small"
                      className='textField'
                      placeholder="Enter front..."
-                     value={question}
+                     value={front}
+                     error={errorFront && !front}
+                     helperText={!front && errorFront}
                      variant="outlined"
                      size="small"
-                     onChange={e => setQuestion(e.target.value)} 
+                     onChange={e => setFront(e.target.value)} 
                      />   
 
                   <TextField
                      id="outlined-size-small"
                      className='textField'
                      placeholder="Enter Back..."
-                     value={answer}
+                     value={back}
+                     error={errorBack && !back}
+                     helperText={!back && errorBack}
                      variant="outlined"
                      size="small"
-                     onChange={e => setAnswer(e.target.value)}
+                     onChange={e => setBack(e.target.value)}
                      />   
             
-            <Link to={'/cards/'} >
-                <Button onClick={() => update()}>UPDATE</Button>                
-            </Link> 
+                 <button>UPDATE</button>
             </form>
 			</div>
         </div>

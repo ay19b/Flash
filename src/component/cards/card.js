@@ -8,15 +8,15 @@ import {Link} from 'react-router-dom';
 
 
 
-function Card({id,question,answer}) {
+function Card({id,front,back}) {
     const dispatch = useDispatch()
 
     return (
 
                   <div className="bat" key={id}>
                           <div className="inf">
-                            <h3>{question}</h3>
-                            <p>{answer}</p>
+                            <h3>{front}</h3>
+                            <p>{back}</p>
                           </div>
                           
                           <div className="tools">

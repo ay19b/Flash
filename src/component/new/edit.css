@@ -53,11 +53,11 @@
     background-color: blue;
     cursor: pointer;
     margin-bottom: 3%;
-    padding: 1.5%;
+    padding: 12px;
+    font-size: 0.9rem;
 }
 .edit button:hover{
-    background-color: #4949c1;
-    color:#cec6c6;
+    background-color: #2727d8;
 }
 
 input:hover label{
@@ -73,6 +73,9 @@ input:hover label{
     }
     .MuiInputBase-root{
         font-size: calc(1vw + 0.4rem) !important;
+    }
+    .MuiFormHelperText-root.Mui-error{
+        font-size: calc(1vw + 0.2rem) !important;
     }
     .create h2{
         font-size: calc(1vw + 1.3rem) !important;
@@ -105,3 +108,16 @@ input:hover label{
     width: 50%;
 }
 }
+
+@media screen and (max-width: 500px) {
+    .create {
+        width: 90%;
+        margin: 20% auto 0% auto;
+    }
+    .edit .textField {
+        width: 90%;
+    }
+    .edit button {
+        width: 70%;
+    }
+    }

@@ -6,7 +6,7 @@ import {selectFlash} from '../../features/counter/flashSlice'
 import AwesomeSlider from 'react-awesome-slider';
 import withAutoplay from 'react-awesome-slider/dist/autoplay';
 import 'react-awesome-slider/dist/styles.css';
-import Empty from '../empty/empty'
+import Empty from '../empty/empty';
 import {Container} from '@material-ui/core';
 
 
@@ -26,13 +26,13 @@ function Practice() {
 			      >
 				  
           {flash.map((item)=>{
-                const{id,question,answer} = item;
+                const{id,front,back} = item;
                 return(
                  
                 <div className="card" key={id}>
-				           <Card question={question}
+				           <Card front={front}
                         id={id}
-                        answer={answer}
+                        back={back}
                         key={id}/>
 			       	  </div>
                  )

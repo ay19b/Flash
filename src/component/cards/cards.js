@@ -20,8 +20,8 @@ function Cards() {
               return(
                   
               <Card id={item.id}
-               question={item.question}
-                answer={item.answer}/>
+               front={item.front}
+                back={item.back}/>
                     )
               })
             }

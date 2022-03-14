@@ -1,16 +1,23 @@
-import React from 'react'
+import React,{useState} from 'react'
 import './card.css'
+import {BiRotateRight} from 'react-icons/bi'
 
 
+function Card({id,front,back}) {
+   const [rotate, setRotate] = useState(false);
 
-function Card({id,question,answer}) {
+   const toggleLinks = () => {
+    setRotate(!rotate);
+  };
       return(
-               <div className='inner-card' key={id}>
-                        <div className="front-card" >
-                          <h2>{question}</h2>
+               <div className={!rotate?'inner-card':'inner-card rotat'} key={id} onClick={toggleLinks}>
+                        <div className="front-card">
+                          <h2>{front}</h2>
+                          <BiRotateRight className="btn-rotate"/>
                         </div>
                         <div className="back-card">
-                          <h2>{answer}</h2>
+                          <h2>{back}</h2>
+                          <BiRotateRight className="btn-rotate"/>
                         </div>
                </div> 
 )

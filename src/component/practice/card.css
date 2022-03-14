@@ -18,7 +18,8 @@ card{
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     border-radius: 15px;
   }
-  .card:hover .inner-card{
+  
+  .rotat{
     transform: rotateY(180deg);
   }
   .front-card, .back-card {
@@ -33,6 +34,10 @@ card{
 .front-card {
     color: black;
 	  overflow:hidden;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
   }
   .front-card h2{
     padding-top: 30%;
@@ -42,12 +47,22 @@ card{
     color: white;
     transform: rotateY(180deg);
 	  overflow:hidden;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
   }
   .back-card h2{
     padding-top: 30%;
   }
 .awssld__box {
     background-color: transparent !important;
+}
+.btn-rotate{
+  font-size: 2rem;
+  color: rgb(0, 0, 0);
+  border-radius: 50%;
+  margin-bottom: 2%;
 }
 
 @media screen and (min-width:1200px){
@@ -62,8 +77,14 @@ card{
     padding-top: calc(1vw + 5rem);
     font-size: calc(1vw + 1rem);
   }
+  .btn-rotate{
+    font-size: calc(1vw + 1.7rem);
+  }
 }
 @media screen and (max-width:700px){
+  .cards{
+    width: 100%;
+  }
   .inner-card {
     position: relative;
     width: 12rem;
@@ -75,12 +96,15 @@ card{
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     border-radius: 15px;
   }
+  .rotat{
+    transform: rotateY(180deg);
+  }
   .front-card h2{
-    padding-top: 45%;
+    padding-top: 55%;
 	  color:rgb(0, 0, 0);
   }
   .back-card h2{
-    padding-top: 45%;
+    padding-top: 55%;
   }
   }
 @media screen and (max-width:520px){
