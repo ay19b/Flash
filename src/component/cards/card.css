@@ -39,6 +39,16 @@
 	cursor:pointer;
 }
 
+.MuiDialogTitle-root h2 {
+    display: flex;
+    align-items: center;
+}
+.MuiDialogTitle-root h2 svg {
+    position: absolute;
+    right: 6px;
+    cursor: pointer;
+}
+
 @media (min-width: 1200px) {
     .bat{
         height: calc(1.5vw + 10rem)
@@ -51,6 +61,24 @@
     }
     .tools svg{
         font-size: calc(1vw + 1.4rem);
+    }
+    .MuiDialog-paperWidthSm {
+        width: 50% !important;
+        height: 50% !important;
+        max-width: none !important;
+    }
+    .MuiTypography-colorTextSecondary{
+        font-size: calc(1vw + 0.6rem) !important;
+    }
+    .MuiDialogTitle-root h2{
+        font-size: calc(1vw + 0.9rem) !important;
+    }
+    .MuiButton-outlined{
+        font-size: calc(1vw + 0.6rem) !important;
+        width:40% !important;
+    }
+    .MuiButton-iconSizeMedium > :first-child{
+        font-size: calc(1vw + 0.6rem) !important;
     }
 } 
 @media (max-width: 700px) {

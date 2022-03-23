@@ -16,26 +16,12 @@ function App() {
        <>
          
       <Switch>
-	     <Route  exact path={'/'} >
-		   <Navbar />
-	       <Cards />
-		</Route>
-        <Route  path={'/cards'} component={Cards}>
-		   <Navbar />
-	       <Cards />
-		</Route>
-	      <Route  path={'/edit'} component={Edit}>
-		  <Navbar />
-		   <Edit />
-		  </Route>
-	      <Route  path={'/practice'} component={Practice}>
-		    <Navbar />
-		    <Practice />
-		  </Route>
-        <Route  path={'/update/:id'} component={Update}>
-		   <Navbar />
-		   <Update />
-		</Route>
+	      <Route  exact path={'/'} ><Navbar /><Cards /></Route>
+          <Route  path={'/cards'} component={Cards}><Navbar /><Cards /></Route>
+		  <Route  path={'/edit'} component={Edit}><Navbar /><Edit /></Route>
+	      <Route  path={'/practice'} component={Practice}><Navbar /><Practice /></Route>
+          <Route  path={'/update/:id'} component={Update}><Navbar /><Update /></Route>
+		  <Route  path={'/:Id'} component={Cards}><Navbar /><Cards /></Route>
       </Switch>
        </>
      </BrowserRouter>

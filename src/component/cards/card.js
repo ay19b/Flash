@@ -1,8 +1,9 @@
-import React from 'react'
+import React, {useState,useEffect} from 'react'
 import './card.css'
 import {GiTrashCan} from 'react-icons/gi'
 import {HiPencilAlt} from 'react-icons/hi'
 import { useDispatch} from 'react-redux'
+import AlertDialog from './dialoge'
 import {deleteFlash} from '../../features/counter/flashSlice'
 import {Link} from 'react-router-dom';
 
@@ -10,6 +11,16 @@ import {Link} from 'react-router-dom';
 
 function Card({id,front,back}) {
     const dispatch = useDispatch()
+    const [open, setOpen] = useState(false);
+
+
+  const handleClickOpen = () => {
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+  };
 
     return (
 
@@ -23,8 +34,11 @@ function Card({id,front,back}) {
                           <Link to={`/update/${id}`} key={id}>
                              <HiPencilAlt  />
                           </Link>
-                          <GiTrashCan color="black" onClick={() =>dispatch(deleteFlash(id))}/>
+                          <Link to={`/${id}`} key={id}>
+                            <GiTrashCan color="black" onClick={handleClickOpen}/>
+                          </Link>
                           </div>
+                          <AlertDialog  open={open} handleClose={handleClose} />
                   </div>
     
  )
