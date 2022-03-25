@@ -1,4 +1,4 @@
-import React, {useState,useEffect} from 'react'
+import React from 'react'
 import {Dialog,DialogContentText,DialogTitle,DialogActions,DialogContent,Button} from '@material-ui/core'
 import {MdClose} from "react-icons/md";
 import {FaTrash} from "react-icons/fa";
@@ -30,12 +30,12 @@ export default function AlertDialog({open,handleClose}) {
         aria-describedby="alert-dialog-description" 
       >
       <DialogTitle id="responsive-dialog-title">
-        {"Remove from basket"}
+        {"Remove from cards"}
       <MdClose onClick={handleClose}/>
       </DialogTitle>
       <DialogContent>
       <DialogContentText id="alert-dialog-description">
-        Are you sure you want to remove this item from the cart?
+        Are you sure you want to remove this item from the cards?
       </DialogContentText>
       </DialogContent>
       <DialogActions>
