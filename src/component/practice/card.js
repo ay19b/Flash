@@ -10,14 +10,14 @@ function Card({id,front,back}) {
     setRotate(!rotate);
   };
       return(
-               <div className={!rotate?'inner-card':'inner-card rotat'} key={id} onClick={toggleLinks}>
+               <div className={!rotate?'inner-card':'inner-card rotat'} key={id} >
                         <div className="front-card">
                           <h2>{front}</h2>
-                          <BiRotateRight className="btn-rotate"/>
+                          <BiRotateRight className="btn-rotate" onClick={toggleLinks}/>
                         </div>
                         <div className="back-card">
                           <h2>{back}</h2>
-                          <BiRotateRight className="btn-rotate"/>
+                          <BiRotateRight className="btn-rotate" onClick={toggleLinks}/>
                         </div>
                </div> 
 )
