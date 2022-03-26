@@ -49,7 +49,7 @@
 .edit button{
     color: white;
     border-radius: 20px;
-    width: 50%;
+    width: 55%;
     background-color: blue;
     cursor: pointer;
     margin-bottom: 3%;
@@ -57,10 +57,16 @@
     font-size: 0.9rem;
     outline: none;
 }
+
 .edit button:hover{
     background-color: #2727d8;
 }
-
+.edit a button{
+    background-color: #ff000c;
+}
+.edit a button:hover{
+    background-color: #dd0d17;
+}
 input:hover label{
 	top: -44%;
 	position: absolute;

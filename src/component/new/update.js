@@ -77,8 +77,12 @@ function Update() {
                      size="small"
                      onChange={e => setBack(e.target.value)}
                      />   
-            
+                <div>
                  <button>UPDATE</button>
+                 <Link to={"/cards"}> 
+                   <button>CANCEL</button>
+                 </Link>
+                </div>
             </form>
 			</div>
         </div>
