@@ -1,0 +1,112 @@
+.nav{
+    padding: 2% 0%;
+}
+
+.logo{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color:black !important;
+    cursor: context-menu;
+}
+
+.logo-white{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: white !important;
+}
+.svgLogo{
+    color:rgb(150, 244, 180);
+    margin-right: 2%;
+}
+.listNav{
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+}
+.listNav li{
+    margin-right: 6%;
+}
+.itemNav{
+    color:#504f5b;
+    font-weight: bold !important;
+}
+.itemNav:hover{
+    color:rgb(150, 244, 180);
+}
+.head-nav{
+  display: none;
+}
+.menu{
+    display:none;
+}
+.menuIcon{
+    cursor:pointer;
+}
+
+@media (min-width: 1200px) {
+    .listNav a h6{
+      font-size: calc(1vw + 0.7rem);
+    }
+    .logo{
+      font-size: calc(1vw + 0.9rem) !important;
+    }
+    .weather-details{
+      font-size: calc(1vw + 0.4rem); 
+    }
+    .status{
+     font-size: calc(1vw + 0.4rem);
+    }
+} 
+@media (max-width: 599px) {
+    .menu{
+        display: flex;
+        justify-content: flex-end;
+    }
+    .listNav{
+        display: flex;
+        flex-direction: column;
+        width: 97%;
+        position: absolute;
+        top: 0%;
+        z-index: 20;
+        align-items: flex-start;
+        height: 100vh;
+        background: linear-gradient(180deg,#39a95d 0,#39a95d 33%,#005611);
+        transform: translateX(-160%);
+        transition: transform 0.5s ease-in;
+        list-style: none;
+        justify-content: flex-start;
+        left: -3%;
+        padding-top: 9px;
+    }
+    
+    .active{
+        transform: translateX(0%);
+        position: fixed;
+    }
+    .head-nav{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 12%;
+      width: 90%;
+    }
+    .iconClose{
+      display:flex;
+      cursor:pointer;
+    }
+    .itemNav {
+        font-size: 2.3rem !important;
+        color: white;
+        font-weight: normal !important;
+      }
+    .itemNav:hover{
+        color:rgb(218, 247, 229);
+    } 
+    .listNav a{
+        margin-bottom: 4.5rem;
+        margin-left: -6%;
+    }
+}

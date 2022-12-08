@@ -1,0 +1,149 @@
+.edit{
+    
+}
+.create{
+	display: flex;
+    flex-direction: column;
+    width: 50rem;
+	border-radius: 15px;
+	box-shadow: -5px 0px 25px -10px rgba(0,0,0,0.62);
+	color: black;
+	margin: 22px auto 0% auto;
+}
+.create h2{
+    padding-top: 4%;
+    font-size: 1.7rem;
+}
+.edit form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.edit .textField{
+    width: 70%;
+    margin: 16px 0%;
+}
+.MuiOutlinedInput-root {
+    border-radius: 10px !important;
+    background-color: #eee;
+}
+
+.edit .tools{
+    display: flex;
+    justify-content: space-between;
+}
+.tools svg{
+    font-size: 1.7rem;
+}
+.input{
+    margin-top: 10%;
+}
+.input label{
+    display: block;
+    text-align: left;
+    margin-left: 4%;
+}
+.input input{
+    width: 90%;
+    height: 2.5rem;
+    border-radius: 10px;
+    border: 1px solid #939191;
+	padding-left: 2%;
+	outline: none;
+}
+.edit form .btns{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 6px;
+}
+.edit form .btns a{
+    width: 25%;
+}
+.edit button{
+    color: white;
+    border-radius: 20px;
+    width: 25%;
+    background-color: blue;
+    cursor: pointer;
+    margin-bottom: 3%;
+    padding: 8px;
+    font-size: 0.9rem;
+    outline: none;
+}
+
+.edit button:hover{
+    background-color: #2727d8;
+}
+.edit a button{
+    background-color: #ff000c;
+    width:100%;
+}
+.edit a button:hover{
+    background-color: #dd0d17;
+}
+input:hover label{
+	top: -44%;
+	position: absolute;
+    left: 18%;
+}
+
+@media (min-width: 1200px) {
+    .MuiOutlinedInput-inputMarginDense {
+        padding-top: 13.5px !important;
+        padding-bottom: 13.5px !important;
+    }
+    .MuiInputBase-root{
+        font-size: calc(1vw + 0.4rem) !important;
+    }
+    .MuiFormHelperText-root.Mui-error{
+        font-size: calc(1vw + 0.2rem) !important;
+    }
+    .create h2{
+        font-size: calc(1vw + 1.3rem) !important;
+    }
+    .edit button{
+        font-size: calc(1vw + 0.2rem) !important;
+    }
+}
+@media screen and (max-width: 900px) {
+.create {
+    width: 75%;
+	margin: 20% auto 0% auto;
+}
+.input input {
+    height: 2.5rem;
+}
+}
+@media screen and (max-width: 600px) {
+.create {
+    width: 85%;
+	margin: 20% auto 0% auto;
+}
+.input input {
+    height: 2rem;
+}
+}
+
+@media screen and (max-width: 500px) {
+    .create {
+        width: 90%;
+        margin: 20% auto 0% auto;
+    }
+    .edit .textField {
+        width: 90%;
+        margin: 18px 0%;
+    }
+    .edit form .btns button{
+        width: 25%;
+    }
+    .edit form .btns a button{
+        width:100%;
+    }
+    .edit button {
+        width: 10rem;
+        padding: 10px;
+    }
+    }
