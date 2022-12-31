@@ -1,13 +1,14 @@
+
 .empty{
 }
 .empty .content{
-	width: 60%;
+  width: 60%;
   margin: 6% auto;
   display: flex;
   justify-content: space-evenly;
   flex-direction: column;
   height: 13rem;
-	box-shadow: -5px 0px 25px -10px rgba(0,0,0,0.62);
+  box-shadow: -5px 0px 25px -10px rgba(0,0,0,0.62);
   border-radius: 9px;
 }
 .content button{
@@ -15,8 +16,11 @@
     outline: none;
     border: none;
     font-size: 1rem;
-    color: white;
+    color: #fff;
     cursor: pointer;
+    padding: 4px 17px;
+    border-radius: 12px;
+    margin-top: -13px;
 }
 .content button:hover{
     background-color: #0a6b2f;
@@ -41,10 +45,10 @@
 @media screen and (max-width: 768px){
 .empty .content {
   width: 85%;
-	margin-top: 20%;
+  margin-top: 20%;
 }
 .empty .content h1{
-	font-size: 1.6rem;
+  font-size: 1.6rem;
 }
 }
 
@@ -52,10 +56,10 @@
 @media screen and (max-width:320px){
 .empty .content{
   width: 90%;
-	margin-top: 30%;
-	font-size: small;
+  margin-top: 30%;
+  font-size: small;
 }
 .empty .content h1{
-	font-size: 1.4rem;
+  font-size: 1.4rem;
 }
 }
