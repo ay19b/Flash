@@ -2,13 +2,13 @@
     
 }
 .create{
-	display: flex;
+    display: flex;
     flex-direction: column;
     width: 50rem;
-	border-radius: 15px;
-	box-shadow: -5px 0px 25px -10px rgba(0,0,0,0.62);
-	color: black;
-	margin: 22px auto 0% auto;
+    border-radius: 15px;
+    box-shadow: -5px 0px 25px -10px rgba(0,0,0,0.62);
+    color: black;
+    margin: 22px auto 0% auto;
 }
 .create h2{
     padding-top: 4%;
@@ -50,8 +50,8 @@
     height: 2.5rem;
     border-radius: 10px;
     border: 1px solid #939191;
-	padding-left: 2%;
-	outline: none;
+    padding-left: 2%;
+    outline: none;
 }
 .edit form .btns{
     display: flex;
@@ -63,15 +63,16 @@
     width: 25%;
 }
 .edit button{
-    color: white;
+    color: #fff;
     border-radius: 20px;
-    width: 25%;
-    background-color: blue;
+    width: 18%;
+    background-color: #00f;
     cursor: pointer;
     margin-bottom: 3%;
     padding: 8px;
-    font-size: 0.9rem;
+    font-size: .9rem;
     outline: none;
+    border: none;
 }
 
 .edit button:hover{
@@ -85,8 +86,8 @@
     background-color: #dd0d17;
 }
 input:hover label{
-	top: -44%;
-	position: absolute;
+    top: -44%;
+    position: absolute;
     left: 18%;
 }
 
